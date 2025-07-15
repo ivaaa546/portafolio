@@ -1,0 +1,408 @@
+:root {
+    --main: #4f46e5;
+    --dark: #111827;
+    --light: #f3f4f6;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--main);
+    color: white;
+    padding: 5rem 1rem;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  h1, h2 {
+    margin-bottom: 0.5em;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: white;
+    color: var(--main);
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background-color: #e0e7ff;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    /* */
+    display: flex;
+    flex-direction: column;
+    min-height: 250px;
+    justify-content: flex-start;
+  }
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    margin-top: 0;
+  }
+  
+  /**/
+  .project-card .links {
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .project-card .links a {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: var(--main);
+    font-size: 0.9rem;
+    text-decoration: underline;
+  }
+
+  .project-preview {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+    transition: filter 0.2s, transform 0.2s;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .preview-link:hover .project-preview {
+    filter: brightness(0.85);
+    transform: scale(1.03);
+  }
+  
+  .lenguajes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .lenguaje-icon {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.2s;
+  }
+
+  .lenguaje-icon:hover {
+    transform: scale(1.15);
+  }
+
+  .lenguajes-titulo {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #4f46e5; /* Color principal del header */
+  }
+  
+  #about {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .socials {
+    list-style: none;
+    padding: 0;
+  }
+  .socials li {
+    display: inline;
+    margin-right: 1rem;
+  }
+  
+#about h2,
+#projects h2,
+#projects,
+.container > h2 {
+  text-align: center;
+}
+
+/* Específico para el título de lenguajes, frameworks y herramientas */
+section#projects > h2 {
+  text-align: center;
+}
+
+#projects h2 {
+  color: #4f46e5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+#contact {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 890px;
+  margin: 3rem auto 2rem auto;
+  text-align: center;
+}
+
+#contact h2 {
+  color: #4f46e5;
+  margin-bottom: 1rem;
+}
+
+#contact a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+#contact a:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.socials li {
+  display: inline-block;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #4f46e5;
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.04);
+}
+  
+#lenguajes-section {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem 2rem 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  max-width: 890px;
+  margin: 3rem auto 2rem auto;
+}
+
+#lenguajes-section h2 {
+  color: #4f46e5;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.header-main {
+  flex: 1;
+  text-align: left;
+}
+
+.header-main h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.header-main p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e7ff;
+}
+
+.about-section {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.about-section h2 {
+  color: white;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.about-section p {
+  color: #e0e7ff;
+  line-height: 1.6;
+  margin: 0;
+}
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-flex {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  .header-main {
+    text-align: center;
+  }
+  
+  .header-main h1 {
+    font-size: 2.5rem;
+  }
+  
+  .header-main p {
+    font-size: 1rem;
+  }
+  
+  .about-section {
+    width: 100%;
+    margin: 0;
+  }
+  
+  .container {
+    padding: 1rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .project-card {
+    min-height: auto;
+  }
+  
+  .lenguajes-grid {
+    gap: 1rem;
+  }
+  
+  .lenguaje-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #contact,
+  #lenguajes-section {
+    max-width: 95%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-main h1 {
+    font-size: 2rem;
+  }
+  
+  .header-main p {
+    font-size: 0.9rem;
+  }
+  
+  .about-section {
+    padding: 1.5rem;
+  }
+  
+  .about-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .project-preview {
+    height: 140px;
+  }
+  
+  .lenguaje-icon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .lenguajes-titulo {
+    font-size: 1rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header-flex {
+    gap: 2rem;
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .lenguajes-grid {
+    gap: 2rem;
+  }
+  
+  .lenguaje-icon {
+    width: 52px;
+    height: 52px;
+  }
+}
+  
