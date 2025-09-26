@@ -7,6 +7,20 @@ const projects = [
         image: "capturas/Captura de pantalla 2025-07-15 160807.png"
     },
     {
+      title: "API REST Notas",
+      description: "API REST para gestion de notas, usuarios y autenticacion usando Node.js, Express, Supbase, Render.",
+      repo: "https://github.com/ivaaa546/Notas_API_REST"
+      
+
+    },
+    {
+      title: "Front Notas",
+      description: "Frontend para la API REST usando React.js, TailwindCSS y Vercel, creación del front para la API REST de notas.",
+      repo: "https://github.com/ivaaa546/Notas_API_REST"
+      
+
+    },
+    {
       title: "Punto de Ventas",
       description: "Aplicación de escritorio para gestionar las ventas y las operaciones diarias de un negocio usando Java con MySQL, integrando reportes, facturacion, sistema de login y registro de usuarios.",
       repo: "https://github.com/ivaaa546/PuntoDeVentas",
