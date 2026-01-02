@@ -2,13 +2,13 @@
 const projects = [
   {
     title: "Go Veny",
-    description: "Plataforma SaaS de e-commerce que permite a emprendedores crear tiendas digitales personalizadas en minutos. Incluye panel de administración, catálogo fluido y checkout directo por WhatsApp. Desarrollado con Next.js 16, TypeScript, React 19, Tailwind CSS y El backend está implementado con Supabase, utilizando PostgreSQL, autenticación, APIs y storage para la gestión segura de usuarios, productos y datos de la plataforma.",
+    description: "Plataforma SaaS de e-commerce que permite a emprendedores crear tiendas digitales personalizadas en minutos. Incluye panel de administración, catálogo fluido y checkout directo por WhatsApp. Desarrollado con Next.js 16, TypeScript, React 19, Tailwind CSS y el backend está implementado con Supabase, utilizando PostgreSQL, autenticación, APIs y storage para la gestión segura de usuarios, productos y datos de la plataforma.",
     image: "capturas/Captura de pantalla 2026-01-02 105821.png",
     repo: "https://github.com/ivaaa546/veny",
     link: "https://veny.vercel.app",
   },
   {
-    title: "Agente IA Whatsapp - CRM Inteligente",
+    title: "Agente IA Whatsapp - CRM",
     description: "Sistema backend escalable desarrollado en Node.js Express que automatiza la atención al cliente vía WhatsApp mediante IA (Google Gemini). La solución permite a empresas cargar su propia base de conocimientos (PDF, Excel, CSV) para que el agente responda consultas precisas usando una arquitectura RAG (Generación Aumentada por Recuperación). Integra Evolution API para la mensajería y Supabase para la gestión de datos y almacenamiento vectorial.",
     repo: "https://github.com/ivaaa546/agentechat"  
   },
