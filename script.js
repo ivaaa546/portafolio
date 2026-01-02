@@ -9,7 +9,7 @@ const projects = [
   },
   {
     title: "Agente IA Whatsapp - CRM Inteligente",
-    description: "Sistema backend escalable desarrollado en Node.js Express que automatiza la atención al cliente vía WhatsApp mediante IA (Google Gemini). La solución permite a empresas cargar su propia base de conocimientos (PDF, Excel, CSV) para que el chatbot responda consultas precisas usando una arquitectura RAG (Generación Aumentada por Recuperación). Integra Evolution API para la mensajería y Supabase para la gestión de datos y almacenamiento vectorial.",
+    description: "Sistema backend escalable desarrollado en Node.js Express que automatiza la atención al cliente vía WhatsApp mediante IA (Google Gemini). La solución permite a empresas cargar su propia base de conocimientos (PDF, Excel, CSV) para que el chatbot responda consultas precisas usando una arquitectura RAG (Generación Aumentada por Recuperación) usando Supabase para la BD vectorial. Integra Evolution API para la mensajería y Supabase para la gestión de datos y almacenamiento vectorial.",
     repo: "https://github.com/ivaaa546/agentechat"  
   },
   {
