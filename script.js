@@ -2,7 +2,7 @@
 const projects = [
   {
     title: "Go Veny",
-    description: "Plataforma SaaS de e-commerce que permite a emprendedores crear tiendas digitales personalizadas en minutos. Incluye panel de administración, catálogo fluido y checkout directo por WhatsApp. Desarrollado con Next.js 16, TypeScript, React 19, Tailwind CSS y Supabase como Bakend.",
+    description: "Plataforma SaaS de e-commerce que permite a emprendedores crear tiendas digitales personalizadas en minutos. Incluye panel de administración, catálogo fluido y checkout directo por WhatsApp. Desarrollado con Next.js 16, TypeScript, React 19, Tailwind CSS y El backend está implementado con Supabase, utilizando PostgreSQL, autenticación, APIs y storage para la gestión segura de usuarios, productos y datos de la plataforma.",
     image: "capturas/Captura de pantalla 2026-01-02 105821.png",
     repo: "https://github.com/ivaaa546/veny",
     link: "https://veny.vercel.app",
