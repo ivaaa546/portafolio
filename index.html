@@ -6,10 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
     content="Portafolio de Iván Alexander - Desarrollador Full Stack especializado en JavaScript, React, Node.js y desarrollo web moderno." />
-  <meta name="keywords" content="desarrollador web, full stack, JavaScript, React, Node.js, portafolio, programador" />
+  <meta name="keywords"
+    content="desarrollador web, full stack, JavaScript, React, Node.js, portafolio, programador, IA, RAG" />
   <meta name="author" content="Iván Alexander" />
   <meta name="theme-color" content="#ff6b35" />
-  <title>Iván Alexander</title>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Iván Alexander | Desarrollador Full Stack & IA" />
+  <meta property="og:description"
+    content="Portafolio de Iván Alexander - Desarrollador Full Stack especializado en JavaScript, React, Node.js y desarrollo de agentes de Inteligencia Artificial." />
+  <meta property="og:image" content="capturas/go-veny.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Iván Alexander | Desarrollador Full Stack & IA" />
+  <meta property="twitter:description"
+    content="Portafolio de Iván Alexander - Desarrollador Full Stack especializado en JavaScript, React, Node.js y desarrollo de agentes de Inteligencia Artificial." />
+  <meta property="twitter:image" content="capturas/go-veny.png" />
+
+  <title>Iván Alexander | Desarrollador Full Stack & IA</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -19,9 +35,10 @@
     <div class="hero-content">
       <div class="hero-badge"> Bienvenido a mi portafolio</div>
       <h1>Soy Iván</h1>
-      <p class="hero-subtitle">Desarrollador Web</p>
+      <p class="hero-subtitle">Developer</p>
       <div class="hero-buttons">
-        <p>Este portafolio refleja trabajos desarrollados por mí, cubriendo desde diseño, desarrollo de backend y frontend, hasta la integración de APIs y bases de datos.</p>
+        <p>Este portafolio refleja trabajos desarrollados por mí, cubriendo desde diseño, desarrollo de backend y
+          frontend, hasta la integración de APIs, bases de datos y sistemas impulsados por Inteligencia Artificial.</p>
         <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
         <a href="#contact" class="btn btn-secondary">Contactar</a>
       </div>
@@ -31,10 +48,12 @@
   <section id="about" class="container">
     <h2> Sobre mí</h2>
     <div class="about-content">
-      <p>Soy un desarrollador apasionado por el desarrollo web y la creación de soluciones innovadoras. Me especializo
-        en JavaScript, React, Node.js y tecnologías modernas.</p>
-      <p>Siempre estoy aprendiendo nuevas tecnologías y buscando desafíos que me permitan crecer profesionalmente
-        mientras creo productos que generen impacto.</p>
+      <p>Soy un desarrollador full-stack apasionado por transformar ideas complejas en soluciones tecnológicas
+        eficientes, elegantes y altamente escalables. Mi enfoque está orientado al desarrollo ágil y a la resolución de
+        problemas lógicos y arquitectónicos complejos.</p>
+      <p>Me motiva estar a la vanguardia tecnológica, desarrollando soluciones que también se puedan integrar con
+        Inteligencia Artificial, automatizaciones avanzadas y sistemas robustos para generar un impacto real y optimizar
+        los procesos de los usuarios.</p>
     </div>
   </section>
 
@@ -73,6 +92,10 @@
         class="lenguaje-icon" title="Express.js" />
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js"
         class="lenguaje-icon" title="Next.js" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+        class="lenguaje-icon" title="Python" />
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="Redis"
+        class="lenguaje-icon" title="Redis" />
     </div>
 
     <div class="lenguajes-grid">
@@ -93,6 +116,16 @@
     <h2>📬 Contacto</h2>
     <p>Escríbeme a <a href="mailto:ivanii5862@gmail.com">ivanii5862@gmail.com</a></p>
   </section>
+
+  <!-- Modal para detalles de proyecto -->
+  <div id="project-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Cerrar modal">&times;</button>
+      <div id="modal-body">
+        <!-- Se llena dinámicamente con JS -->
+      </div>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2026 Iván Alexander</p>

@@ -548,8 +548,8 @@ h2 {
 }
 
 .project-card .links a:hover::before {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
 }
 
 .project-card .links a img {
@@ -591,6 +591,142 @@ h2 {
 
 .preview-link:hover .project-preview {
   transform: scale(1.05);
+}
+
+/* Estilos para el fallback de proyectos sin capturas */
+.project-fallback-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 180px;
+  margin: 1rem 0;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02);
+}
+
+.project-card:hover .project-fallback-visual {
+  border-color: rgba(255, 107, 53, 0.4);
+  transform: translateY(-2px);
+}
+
+.fallback-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.15;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.project-card:hover .fallback-glow {
+  opacity: 0.3;
+  width: 120px;
+  height: 120px;
+}
+
+.fallback-svg {
+  width: 44px;
+  height: 44px;
+  color: var(--text-secondary);
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: 0.8rem;
+}
+
+.project-card:hover .fallback-svg {
+  color: var(--text-primary);
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.fallback-tag {
+  font-size: 0.75rem;
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+
+.project-card:hover .fallback-tag {
+  color: var(--text-secondary);
+}
+
+/* Gradientes específicos para cada tipo de proyecto en el fallback */
+.fallback-cli-writer .fallback-glow {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+.fallback-cli-writer .fallback-svg {
+  color: #10b981;
+}
+
+.fallback-rag-web .fallback-glow {
+  background: linear-gradient(135deg, #00d4ff 0%, #0066ff 100%);
+}
+.fallback-rag-web .fallback-svg {
+  color: #00d4ff;
+}
+
+.fallback-converter-web .fallback-glow {
+  background: linear-gradient(135deg, #f43f5e 0%, #f97316 100%);
+}
+.fallback-converter-web .fallback-svg {
+  color: #f43f5e;
+}
+
+.fallback-ai-whatsapp .fallback-glow {
+  background: var(--gradient-green);
+}
+.fallback-ai-whatsapp .fallback-svg {
+  color: var(--accent-green);
+}
+
+.fallback-video .fallback-glow {
+  background: var(--gradient-purple);
+}
+.fallback-video .fallback-svg {
+  color: var(--accent-purple);
+}
+
+.fallback-database .fallback-glow {
+  background: var(--gradient-blue);
+}
+.fallback-database .fallback-svg {
+  color: var(--accent-blue);
+}
+
+.fallback-desktop-java .fallback-glow {
+  background: var(--gradient-orange);
+}
+.fallback-desktop-java .fallback-svg {
+  color: var(--accent-orange);
+}
+
+.fallback-desktop-csharp .fallback-glow {
+  background: linear-gradient(135deg, #9b51e0 0%, #3f51b5 100%);
+}
+.fallback-desktop-csharp .fallback-svg {
+  color: #9b51e0;
+}
+
+.fallback-desktop-library .fallback-glow {
+  background: linear-gradient(135deg, #f2c94c 0%, #f2994a 100%);
+}
+.fallback-desktop-library .fallback-svg {
+  color: #f2c94c;
 }
 
 /* ========== LENGUAJES Y TECNOLOGÍAS ========== */
@@ -676,9 +812,18 @@ h2 {
   filter: brightness(0) invert(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
+.lenguaje-icon[alt="Next.js"] {
+  filter: invert(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
 .lenguaje-icon[alt="Express.js"]:hover,
 .lenguaje-icon[alt="GitHub"]:hover {
   filter: brightness(0) invert(1) drop-shadow(0 12px 24px rgba(255, 107, 53, 0.8));
+  transform: translateY(-10px) scale(1.25) rotate(5deg);
+}
+
+.lenguaje-icon[alt="Next.js"]:hover {
+  filter: invert(1) drop-shadow(0 12px 24px rgba(255, 107, 53, 0.8));
   transform: translateY(-10px) scale(1.25) rotate(5deg);
 }
 
@@ -1063,6 +1208,170 @@ footer p {
 
 .project-card:nth-child(6) {
   animation-delay: 0.6s;
+}
+
+/* Botón Ver más información */
+.btn-more {
+  background: transparent;
+  border: none;
+  color: var(--accent-orange);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  text-align: left;
+  display: inline-block;
+  align-self: flex-start;
+  position: relative;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.btn-more::after {
+  content: ' →';
+  display: inline-block;
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+}
+
+.btn-more:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+}
+
+.btn-more:hover::after {
+  transform: translateX(4px);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Modal Content Card */
+.modal-content {
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 3rem;
+  max-width: 700px;
+  width: 100%;
+  position: relative;
+  box-shadow: var(--shadow-lg), var(--shadow-orange-glow);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--border-radius);
+  padding: 2px;
+  background: var(--gradient-orange);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.modal-overlay.active .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+/* Modal Close Button */
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.modal-close:hover {
+  background: rgba(255, 107, 53, 0.2);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+  transform: rotate(90deg);
+}
+
+/* Modal Title */
+.modal-body h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  background: var(--gradient-orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+}
+
+/* Modal Description */
+.modal-desc p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+/* Modal Media Wrapper */
+.modal-media {
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 250px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 2rem;
+  }
+  
+  .modal-body h3 {
+    font-size: 1.6rem;
+  }
+  
+  .modal-desc p {
+    font-size: 1rem;
+  }
 }
 
 /* Scroll suave */
